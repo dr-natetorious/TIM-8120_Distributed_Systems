@@ -18,11 +18,17 @@ The authors [Kocher et al.](SpectreAttack.pdf) describe an issue with the branch
     
     From a security perspective, speculative execution involves executing a program in possibly incorrect ways. However, because CPUs are designed to maintain functional correctness by reverting the results of incorrect speculative executions to their prior states, these errors were previously assumed to be safe.
 
-Given enough iterations of `x > 0` the branch predictor will learn to pre-execute the expression `array[x]` and fetch the value from memory into the local cache. When `x` is negative or out of bounds the processor abandons those pre-executions however the cache is still populated.
+### How does it work
 
-This behavior leads to the tedious task of enumerating through memory and paging each value one `wORD` at a time. There are likely optimizations to load entire cache lines though this was not discussed in the literature.
+Given enough iterations of `x > 0` the branch predictor will learn to pre-execute the expression `array[x]` and fetch the value from memory into the local processor cache. This cache is shared between the various system processes but protected from direct access by the virtual memory system.
 
 ```c++
-    if (x > 0)
-        array[x] = taco;
+    if (x < array1_size)
+        y = array2[array1[x] * 4096];
 ```
+
+Low rights processes are capable of evicting the shared processor cache line entries. Since the user controls `x` and `array1` they can cause cache miss that loads `physical_mem[k]` into `processor.cache[base_address + *physical_mem[k])]`. Then by checking the time required to access the cache line can of `processor.cache[base_address + offset]` determine if that value was in the cache or fetched from memory.
+
+If the value `base + offset` was quickly returned from the local cache, then we know that `phyisal_memory[k]` must equal `offset`.
+
+    For this example, a simple and effective gadget would be formed by two instructions (which do not necessarily need to be adjacent) where the first adds (or XORs, subtracts, etc.) the memory location addressed by an attacker-controlled register R1 onto an attacker-controlled register R2, followed by any instruction that accesses memory at the address in R2. In this case, the gadget provides the attacker control (via R1) over which address to leak and control (via R2) over how the leaked memory maps to an address which is read by the second instruction. 
