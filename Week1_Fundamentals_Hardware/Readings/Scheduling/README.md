@@ -32,3 +32,33 @@ Low rights processes are capable of evicting the shared processor cache line ent
 If the value `base + offset` was quickly returned from the local cache, then we know that `phyisal_memory[k]` must equal `offset`.
 
     For this example, a simple and effective gadget would be formed by two instructions (which do not necessarily need to be adjacent) where the first adds (or XORs, subtracts, etc.) the memory location addressed by an attacker-controlled register R1 onto an attacker-controlled register R2, followed by any instruction that accesses memory at the address in R2. In this case, the gadget provides the attacker control (via R1) over which address to leak and control (via R2) over how the leaked memory maps to an address which is read by the second instruction. 
+
+## Evaluation of Speculation in Out-of-Order Execution of Synchronous Dataflow Networks (2013)
+
+The authors [Daniel Baudisch, Klaus Schneider](Eval_Speculation_OutOfOrder_Sync_Dataflow_Networks.pdf) draw a parallel between between the execution of synchronous dataflow networks (DFN) and hardward processor execution. In both scenarios, tasks need to be performed with loose ordering of events.
+
+To extend on previous work they hypothesized that it would be possible to also include specualative execution within the DFN, by executing tasks that were likely to follow with probable combinations. These results are then cached with an appropriate Time to Live (TTL) and used, `iff` they are actually needed. This results in faster performance for the default case as idle time was more efficiently used.
+
+### Tomasulo's Out of Order Execution Algorithm
+
+> Tomasulo, R.: An efficient algorithm for exploiting multiple arithmetic units. IBM J. Res. Dev. 11(1), 25–33 (1967)
+
+This [Georgia Tech video](https://www.youtube.com/watch?v=PZZvhqnch5o) describes what Tomasulo's algorithm does and is more verbosely detailed [here](https://www.youtube.com/watch?v=jyjE6NHtkiA).
+
+![tomasulo.png](tomasulo.png)
+
+![tomasulo_example.png](tomasulo_example.png)
+
+### Motivations for this approach
+
+![single_thread_vs_task_scheduled.png](single_thread_vs_task_scheduled.png)
+
+### Time-Insenstive Speculation Check
+
+A speculated task is assumpted to be performed with an idempotent action, that will return the same value for the same parameter set. This requirement makes it easy to check a speculated result is useful, as its parameter values become the primary key in the lookup table.
+
+    The easiest way to handle races is to ignore them at the point of the speculation. When a speculation result is being checked, we simply compare all inputs that actually have been used by the task. This is done by an additional function which is created by our code generator. The behavior of each node is deterministic. Hence, applying a task’s function to the same inputs will always yield the same outputs. In turn, if the inputs of a speculation and the actual inputs of a pending task are equal, then the speculation result is exactly the same as the result of the non-speculative execution.
+
+One of the challenges with this approach is that the speculated task is scheduled before the antagionous task, but could end afterwards. This enables a race condition that can be avoided by placing timestamps on the results. Then the timestamp can be used to determine which value should be committed into memory.
+
+The authors relied on a centralized network time service as the source of truth. This mitigated the scenario where clock skew will cause the wrong value to be selected.
