@@ -12,7 +12,7 @@ These flowcharts are also [Petri networks](https://en.wikipedia.org/wiki/Petri_n
 
 ## Programming Model
 
-Their implemenetation relies on [Apache Orestration Director Engine (ODE)](https://ode.apache.org/) to execute their Xml based job definitions. A _Programming in the large / Programming in the small pattern_ is used to implement the job.
+Their implemenetation relies on [Apache Orchestration Director Engine (ODE)](https://ode.apache.org/) to execute their Xml based job definitions. A _Programming in the large / Programming in the small pattern_ is used to implement the job.
 
 *Programming in the Large* refers to the high level language that uses Xml tags to describe the invocations to various _actions_.
 *Programming in the Small* refers to the Java code behind that implement individual _action_.
