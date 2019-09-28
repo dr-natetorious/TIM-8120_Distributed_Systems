@@ -8,7 +8,7 @@ The authors [Martinez, A; Vazquez, B; Estada, H; Santillan, L; Zavala, C](Incorp
 
 ### How does i* fit in the larger picture
 
-    i* is one of the most well-founded organizational modeling techniques (Yu et al. 2011). Its main feature is its expressibility for representing intentional social relations among stakeholders. i* mainly focuses on: (a) the representation of social and intentional relationships mainly of the network of actors of an enterprise, and (b) the representation of the internal behaviors required to satisfy actor dependencies.
+> i* is one of the most well-founded organizational modeling techniques (Yu et al. 2011). Its main feature is its expressibility for representing intentional social relations among stakeholders. i* mainly focuses on: (a) the representation of social and intentional relationships mainly of the network of actors of an enterprise, and (b) the representation of the internal behaviors required to satisfy actor dependencies.
 
 ![i_star_framework_comparison.png](i_star_framework_comparison.png)
 
