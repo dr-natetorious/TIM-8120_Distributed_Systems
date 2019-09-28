@@ -55,8 +55,8 @@ However, in modern systems there are multiple vantage points that are trying to 
 - Phase 1: Problem and HPCS experts cooperate.
 
 - Phase 2: Problem’s experts form a set named _Problem Technical Accounting_ (PTA), based on problem features, including: 
-  - its constraints 
-  - special features 
+  - its constraints
+  - special features
   - requirements
   - technical information
 
@@ -69,7 +69,7 @@ system must control system resources in a way that each process, within its life
 
 #### What is the sixth phase (abstract idea)
 
-  Phase 6 The HPCS expert is notified that the nature of the PTA set has changed. On the other hand, the HPCS is executing processes. At this moment, either the HPCS expert must change its position from an external entity to an internal entity to reconfigure the system or direct the system to a suspend state, after which it can reconfigure the HPCS based on the new PTA set, which is of course very time consuming.
+> Phase 6 The HPCS expert is notified that the nature of the PTA set has changed. On the other hand, the HPCS is executing processes. At this moment, either the HPCS expert must change its position from an external entity to an internal entity to reconfigure the system or direct the system to a suspend state, after which it can reconfigure the HPCS based on the new PTA set, which is of course very time consuming.
 
 ### Principals of Design
 
