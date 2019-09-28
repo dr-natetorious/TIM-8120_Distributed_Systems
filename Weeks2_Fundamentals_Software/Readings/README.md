@@ -17,3 +17,7 @@ The authors [Xitong, L; Stuart, M](Dynamics_SOA_Implementation.pdf) interviewed 
 One of their key reasons was the `worst-before-better` phenomena, that caused many companies to abandon hope prematurely. For many interviewees the path to success was understanding that transforming to SOA would require `duration of committment` more than anything.
 
 The authors explored this notion and found that often insufficient learnings would take place. These challenges led to frustration and the developers blamed the technology, instead of their training. Several identicial examples appeared with both the `PRO SOA` and `ANTI SOA` audiences, such as complexity to configure system. The more trained staff discovered patterns to centralize and decentralize these configurations, with high fluidity and best fit for the scenario capabilities. However, the non-trained staff found the different options available confusing and wanted a one-size fits all.
+
+## Incorporating technology in service-oriented i* business models: a case study (2017)
+
+The authors [Martinez, A; Vazquez, B; Estada, H; Santillan, L; Zavala, C](Incorp_SOA_BusinessModels_CaseStudy.pdf) reviewed the need for [I*](https://en.wikipedia.org/wiki/I*) modeling, a high level systems design framework, to include the notion of abstract technology. They argue that by incorporating systems technology in these designs  
