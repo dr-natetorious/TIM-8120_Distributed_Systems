@@ -27,6 +27,6 @@ They intentionally avoid using the term `peer` as it suggests that the third-par
 
 This conclusion can be applied to distributed software systems by understanding where a system fits on these dimensions. If it drifts too far in any direction then compensations are required to ensure a safe and reliable platform. The authors use the extreme of Craiglist with _high consociality and low platform intermediation_ -- that offsets the high risks with user training.
 
-Understanding these mesh networks is important as not all ecosystems can be fully trusted. Consider a Mobile Ad Hoc Network (MANET) as discussed with [Context Centric Cluster Computing (C4) in Ad Hoc Network (2016)](../../Week1_Fundamentals_Hardware/Readings/Autoscale/README.md) where ad hoc users use thier mobile devices as packet forwarding devices. Without secure design considerations, any of these forwarding devices could manipulate the transmission to include malware or bogus results.
+Understanding these mesh networks is important, as not all ecosystems can be fully trusted. Consider a Mobile Ad Hoc Network (MANET) as discussed with [Context Centric Cluster Computing (C4) in Ad Hoc Network (2016)](../../Week1_Fundamentals_Hardware/Readings/Autoscale/README.md) where ad hoc users use thier mobile devices as packet forwarding devices. Without secure design considerations, any of these forwarding devices could manipulate the transmission to include malware or bogus results.
 
 ![lem_magic_quad.png](lem_magic_quad.png)
