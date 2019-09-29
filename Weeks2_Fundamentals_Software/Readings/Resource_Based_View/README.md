@@ -30,3 +30,28 @@ and SCM performance (SCP). We find that all three sets of IT-enabled resources (
 implies that IT-enabled resources for data management and supply chain planning are important, but do not seem to create business value themselves. Instead, DMR and IPR, which are more technological resources for SCA, have an indirect impact on SCM performance through complementary resources, PMR.
 
 ![sca_correlation_coefficient.png](sca_correlation_coefficient.png)
+
+## INFORMAL PLANNING IN DEPOPULATING RURAL AREAS: A resource-based view on informal planning practices (2017)
+
+The authors [Syssner, J; Meijer, M](InformationPlanning_in_Depopulating_Rural_Areas.pdf) explore strategies for resource planning in areas that are reducing the population. This perspective is different from most research that focuses on ubranization or expanding the organizations footprint into growing markets.
+
+> A growing number of scholars have responded to the plea for alternative planning perspectives. However, most of these studies have been carried out in urban environments such as Detroit, Philadelphia and Leipzig. In such contexts, depopulation materialises in the hollowing out of urban cores and/or in urban sprawl, and the planning strategies advocated in these settings often involve attempts to use vast spaces in innovative ways, such as for ‘greening the city’. The spatial manifestations of shrinkage, however, differ in urban and rural contexts, as do the policy and planning implications of shrinkage.
+> [...]
+> Our framework is based on two rudimentary yet interrelated observations. First, it builds on the notion that in order to understand planning in sparsely populated areas, it is necessary to acknowledge both formal and informal planning practices. Here, our analytical focus is on informal planning
+practices. Second, our framework builds on the observation that since the resource base is altered in depopulating areas, it is necessary to take a broader perspective in order to understand the available resources. That is, we adopt a resource-based view of the planning process, and focus on resources that are planned and resources that are generated through planning. In conclusion, we suggest that informal planning practices can generate a wide range of resources
+that can be used for the potential benefit of the local community.
+
+### Relational, Contextual and Situtational Resources
+
+> Here, we argue that all resources must be seen as being relational, contextual and situational. In a relational understanding, a resource is believed to come about in relation to a need or an intended outcome and in relation to the actors who generate it. Bathelt and Glückler (2005, 1547) make a strong argument for a relational rather than substantive understanding of resources, while opposing the habitual idea that resources should be ‘limited in terms of their availability’, and ‘used up through consumption’ (ibid.). With a relational understanding of resources, they argue, resources are not necessarily limited, and their use-value or application is not necessarily predetermined (ibid.).
+> That resources are contextual is critical. This implies that what is conceptualised as a resource in one social, spatial or political context may not be conceptualised as a resource in another setting.
+> That resources are situational is understood here to add a temporal understanding of resources. A resource is a resource not only under certain contextual conditions, but also during specific periods of time.
+
+A core idea of the paper is that resources are relational, contextual and situational; such that they are only resources if they are useful when they are needed. For instance, if Bob needs a shovel -- _one that is 1,000 miles away is still a shovel but not a resource_. There needs to be considerations around the avaiability of the assets, so their potential fully maximized. As areas become more sparse, the cost of these resources increases which results in a need for more efficient placement NOT a complete abandonment.
+
+### What are the characteristics to measure resource-planning on
+
+- Finanacial
+- Material
+- Human
+- Organizational
