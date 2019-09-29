@@ -13,3 +13,5 @@
 **/.vs/*
 **/src/out/
 **/*.class
+Weeks2_Fundamentals_Software/Environments/COBRA/src/HelloApp
+Weeks2_Fundamentals_Software/Environments/COBRA/src/orb.db
