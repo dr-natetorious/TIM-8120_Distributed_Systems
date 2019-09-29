@@ -37,3 +37,33 @@ Instead a case study is evaluated where SOA enabled the teachers to gain _capabi
 *Service integration implementation pattern*: such mode can fully embody the advantage of SOA in recombination. The brand-new service is gained through recombination of workflow and combining different function demands. Such pattern contributes to improving system efficiency, reducing the pressure of service terminal and gaining the better exhibition effect, as shown in Fig.4.
 
 *Event Service Broker (ESB) pattern*: as a common pattern, ESB-based SOA design pattern can solve service interaction and communication problem. Besides, it supports controllable distributed bottom framework and owns information sharing ability. The interaction methods of ESB mode include synchronous processing and asynchronous processing, as shown in Fig.5.
+
+## A service-oriented simulation integration platform for hierarchical manufacturing planning and control. (2016)
+
+The authors [Xu, D; Nageshwaraniyer, S; Son, Y](SOA_SimulatedIntegrationPlatform_for_HierarchicalManufacturing.pdf) provide "a coherent and comprehensive distributed simulation platform is proposed to support hierarchical manufacturing planning and control. This platform enables integration of various hardware and software components within and across supply chain members, such as manufacturing equipment, physics-based process simulators, system-dynamic, agent-based and discrete-event simulators (DESs), and databases via web services technology."
+
+They describe that businesses are turning their supply chain strategies into globally distributed systems. These systems can be challenging to measure and simulate as they span multiple third-party businesses, each operating as a black box. Even the systems that are directly owned by the business are often legacy and hard to incorporate by default. Through the use of SOA these legacy systems and blackboxes (facades) can be connected together in such a manner as to mimic a reasonable approximation of the original system under test.
+
+Section 2 of the article focuses heavily on the historical evolution of manufacturing simulation. There is a lot of attention to the challenges of legacy systems. Many experts believe that engulfing these legacy systems inside of SOA architectures is an economical solution for many scenarios.
+
+### Why are simulations needed in these scenarios
+
+Similar to [Erskine, H; Karsten, B; Martin, M](HybridFramework_Simulation_SOA.pdf), the authors were able to create facades around these physical plants, workstations, and employee agents. Then it became possible with high precision to evaluate the behavior when any subset of these physical constructs were replaced with a virtual instance. These virtual instances can then be used for fault injection and related capabilities to assess how the larger ecosystem would perform.
+
+![manufacturing_configuration.png](manufacturing_configuration.png)
+
+In general, it is suitable for military or industry areas having the following characteristics (Lendermann et al. 2003):
+
+1. high variability and stochastic conditions in the production/work environment
+2. complex task dependency, and operations including large amount of handshaking processes
+3. possibility of structural changes in the supply chain.
+
+It’s a very useful tool to set up realistic settings of a supply chain
+
+### How was their simulation configured
+
+The core idea centers around the hierarchial structure of: facade -> webservice -> legacy system, so that any aspect of the distributed supply chain could be replaced with a virtual instance. There are extensive details in Section 5 around each aspect of this design. 
+
+![manufacturing_service_diagram.png](manufacturing_service_diagram.png)
+![shop_service.png](shop_service.png)
+![manufacturing_choreogrpahy.png](manufacturing_choreogrpahy.png)
