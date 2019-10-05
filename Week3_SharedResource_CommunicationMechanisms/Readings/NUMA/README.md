@@ -27,3 +27,7 @@ If these protocol limitations can be overcome then Ethernet is a cost efficient 
 ### How does Tyche improve performance
 
 The analysis showed that lock contention causes up to 2x performance degrade; to mitigate this they queue the storage writes and then use a small number of threads to dequeue. While there is a thread context switch, the cost versus serializing the write are trivial. They also introduce a notion of an "end-to-end channel" so that physical adapters and remote memory can be determined up front. This approach enables the operating system to avoid excessive copy operations and instead rely on remapping of shared/virtual memory pages.
+
+They spent a significant amount of attention to the critically of NUMA affinity within a worker process, as this can easily influence performance by around 17-24% throughput. Additional investigations are required around dynamic NUMA aware scheduling and how they can be transparently integrated into the operating systems.
+
+![affinity_aware_scheduler.png](affinity_aware_scheduler.png)
