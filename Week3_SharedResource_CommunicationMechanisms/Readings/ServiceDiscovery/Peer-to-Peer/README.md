@@ -27,3 +27,10 @@ The authors [Lazaro, D., Marques, J.M., Jorba, J. & Vilajosara, X.](Decentralize
   - Local Centralization: The behavior when one node is responsible for a subset of peers
 - Information Spread Method
   - Pull/Push
+
+### What systems exist with these characteristics
+
+The remainder of the paper (30+ pages) provides examples of each of these requirements and design characteristics.
+
+![example_technology.png](example_technology.png)
+![example_complexity.png](example_complexity.png)
