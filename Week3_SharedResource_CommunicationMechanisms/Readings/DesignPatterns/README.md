@@ -4,7 +4,7 @@
 
 The author [Alappatt, A](NetworkApplications_Are_Interactive.pdf) describes the challenges of applying single machine programming patterns to networked applications. He proposes the notion of designing around communication and not sequential control structure. This approach leads to scenarios such as transforming the logic into _source and sink agent based solutions_.
 
-## Consider two arithmetic expressions
+### Consider two arithmetic expressions
 
 > Y=X+A and A=B+C. With the sequential programs now in use, these are written sequentially as { A=B+C; Y=X+A }. The programs operate sequentially to get
 the answer. If they are accidently written as { Y=X+A; A=B+C }, the program will continue to operate, but the answer will be wrong (i.e., a bug). Is there
@@ -17,3 +17,9 @@ computation raises A, it is consumed automatically by the second computation to 
 > Notice in this case the agents run concurrently, but because the second agent is waiting on A, that is raised by the first agent. The two computations are concurrent. The two agents are combined but they expose the combination actions (i.e., they accept C, B, and X and produce Y). This eliminates the propensity of bugs caused by the out-of-order coding in sequential languages.
 
 ![communication_based_control.png](communication_based_control.png)
+
+## Modeling Message Queueing Services with Reliability Guarantee in Cloud Computing Environment Using Colored Petri Nets (2015)
+
+The authors [Jing Li Yidong Cui and Yan Ma](Queuing_with_Reliability_Guarantee_in_CloudComputing.pdf) walk over the process of using _Colored Petri Nets_ to model distributed FIFO queue services, like Amazon Simple Queue Service (SQS).
+
+They recommend using [CPN Tools v4.0](http://cpntools.org/) for creating and simulating these environments.
