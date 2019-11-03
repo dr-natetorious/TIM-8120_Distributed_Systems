@@ -73,8 +73,28 @@ Dijkstr'a algorithm finds the shortest path from a _single node_, versus Floyd-W
 
 ## Johnson's algorithm
 
-https://www.youtube.com/watch?v=xc2ua8sQAoE
+It starts determines the _all pairs shortest path_, with support for negative weights. This algorithm uses a [series of transforms](https://www.youtube.com/watch?v=xc2ua8sQAoE) to get a directed acyclical graph (DAG) into a normalized form, then Dijkstra's algorithm can be executed to get the final answer.
+
+1. Create a new single source vertex (S), that connects to all other vertice with weight of zero.
+2. Apply Bellman-Ford to get the shortest paths from (S) to each vertice
+3. Each vertice is re-weighted using the values of step (2)
+4. The reweight of each `edge_cost = dist(u,v)` becomes `edge_cost' = dist(u,v) + head - tail`
+
+![johnson_start.png](johnson_start.png)
+![johnson_end.png](johnson_end.png)
 
 ## Viterbi algorithm
 
-https://www.youtube.com/watch?v=6JVqutwtzmo
+A [many-to-many strategy](https://www.youtube.com/watch?v=6JVqutwtzmo) that finds the most efficient path across a multi-dimensional graph. The algorithm relies on an _Additivie, Compare, Eliminate_ approach to prune branches down to the best survivors.
+
+For instance, what is the most efficient route from coast-to-coast that takes 7 days and each stop is maximum of 750 miles? This can be derived by:
+
+1. Chose a random starting at hop 1 and ending on the last hop
+2. Determine the best choices for getting to that point
+3. Prune the paths that would not have been taken
+4. Increment one hop
+5. If not at last hop, goto (2)
+
+![viterbi_start.png](viterbi_start.png)
+![viterbi_end.png](viterbi_end.png)
+![viterbi_psuedo.png](viterbi_psuedo.png)
