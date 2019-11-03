@@ -59,8 +59,22 @@ Another challenge with Dijkstra's algo is the calculation of the current shortes
 
 A* enhances the previous algorithms to include a heuristic of how far do we need to go. An example heuristic could be the `euclidian distance` from the vertex to the destination. Then `distance = start_point + edge_weight + heuristic`, which naturally forces a preference towards the lowest heuristic (and correct direction).
 
+The strategy also leverages a priority queue that is sorted on the current shortest path. At the end of each iteration, the `first(priority_queue)` vertex is always chosen, until the end is reached or all vertexes are visited (no solution).
+
+Since this strategy does not evaluate most of the vertexes, it has a much lower memory footprint and computational overhead.
+
 ## Floyd–Warshall algorithm
+
+Dijkstr'a algorithm finds the shortest path from a _single node_, versus Floyd-Warshall finds [for _all vertice pairs_](https://www.youtube.com/watch?v=4OQeCuLYj-4). It also supports negative weights, similar to Bellman-Ford.
+
+![floyd_warshall_pseudo.png](floyd_warshall_pseudo.png)
+
+![floyd_warshall_solved.png](floyd_warshall_solved.png)
 
 ## Johnson's algorithm
 
+https://www.youtube.com/watch?v=xc2ua8sQAoE
+
 ## Viterbi algorithm
+
+https://www.youtube.com/watch?v=6JVqutwtzmo
