@@ -2,43 +2,42 @@
 
 ## Dijkstra's algorithm
 
-The key objective of this algorithm is to calculate the shortest distance from a starting point, to every other vertex in a graph. 
+The key objective of this algorithm is to calculate the shortest distance from a starting point, to every other vertex in a graph.
 
 The strategy [attempts to build a table](https://www.youtube.com/watch?v=pVfj6mxhdMw) that specifies the distance to each vertex and its previous vertex. Then the shortest path can be determined by looking at the previous vertex column and walking back to the starting point.
 
 At each iteration of the process, the _unvisited vertex with the shortest distance in the table_, is selected and then its edges are traversed in ascending order. As each edge is enumerated the `distince = starting_point + edge_weight` is compared against the current cost to reach that locaiton. If it is less, then the table is updated to signify a better route.
 
 ```c#
-var shortest_path_table = Table<VertexId, Distance, PreviousVertex>
-var visited, unvisited = list
+Map Dijkstra(Graph, start_point) {
+    var shortest_path_table = Map<VertexId, Distance, PreviousVertex>;
+    var visited, unvisited = list
 
-// Init
-foreach (vertex) {
-    shortest_path_table.Add(vertex, infinity, null);
-    unvisited.Add(vertex)
-}
-
-// Tag the starting point
-shortest_path_table[start_point].distance = 0
-
-// Loop until every node is visited
-do
-{
-    var vertex = pop_shortest_distance_from_unvisited()
-    foreach (edge in vertex.edges ordered desc) {
-        var path_distance = vertex.distance + edge.weight
-        var other_dude = shortest_path_table[edge.OtherEnd];
-
-        if (other_dude in visited) continue
-
-        if (other_dude.distance > path_distance) {
-            other_dude = (path_distance, vertex);
-        }
+    // Init
+    foreach (Graph.vertex) {
+        shortest_path_table.Add(vertex, infinity, null);
+        unvisited.Add(vertex)
     }
 
-    visited.Add(vertex)
-} while(unvisited not empty)
+    // Tag the starting point
+    shortest_path_table[start_point].distance = 0
 
+    // Loop until every node is visited
+    do
+    {
+        var vertex = pop_shortest_distance_from_unvisited()
+        foreach (edge in vertex.edges ordered ascending) {
+            var path_distance = vertex.distance + edge.weight
+            var other = shortest_path_table[edge.to];
+
+            if (other.distance > path_distance) {
+                other.update(path_distance, vertex);
+            }
+        }
+    } while(unvisited not empty);
+
+    return shortest_path_table;
+}
 ```
 
 ![dijkstra.png](dijkstra.png)
